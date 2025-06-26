@@ -30,7 +30,7 @@ const letrasMinusculas = 'abcdefghijklmnopqrstuvwxyz'
 const numeros = '0123456789'
 const simbolos = '!@%*?'
 
-gerasenha();
+geraSenha();
 
 function geraSenha();{
 let alfabeto = '';
@@ -55,4 +55,20 @@ for(let i = 0; i < tamanhoSenha; i++) {
     senha = senha + alfabeto[numeroAleatorio];
 }
 campoSenha.value = senha;
+}
+Const campoSenha = document.querySelector ('#campo-senha')
+Const checkbox = document.querySelectorAll ('.checkbox')
+Const forcaSenha = document.querySelector ('.forca')
+
+numeroAleatorio = math.Floor(numeroAleatorio);
+senha = senha + alfabeto[numeroAleatorio];
+campoSenha.value + senha;
+classificaSenha();
+
+function classificaSenha(){
+    forcaSenha.classlist.remove('fraca', 'media', 'forte');
+    if(tamanhoSenha > 11){
+        forcaSenha.classlist.add('forte');
+        
+    }
 }
